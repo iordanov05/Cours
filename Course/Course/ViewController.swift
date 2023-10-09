@@ -6,11 +6,12 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
+// final class - класс, от которого нельзя наследоваться
+final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemMint
         // Do any additional setup after loading the view.
     }
 
