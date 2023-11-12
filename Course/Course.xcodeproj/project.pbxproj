@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D415AB292B010F0C008B7498 /* BeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415AB282B010F0C008B7498 /* BeerService.swift */; };
+		D415AB2B2B010F4A008B7498 /* BeerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415AB2A2B010F4A008B7498 /* BeerDTO.swift */; };
 		D47D779B2AD1D86300E3CD35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47D779A2AD1D86300E3CD35 /* AppDelegate.swift */; };
 		D47D779D2AD1D86300E3CD35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47D779C2AD1D86300E3CD35 /* SceneDelegate.swift */; };
 		D47D779F2AD1D86300E3CD35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47D779E2AD1D86300E3CD35 /* ViewController.swift */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D415AB282B010F0C008B7498 /* BeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerService.swift; sourceTree = "<group>"; };
+		D415AB2A2B010F4A008B7498 /* BeerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDTO.swift; sourceTree = "<group>"; };
 		D47D77972AD1D86300E3CD35 /* Course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Course.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47D779A2AD1D86300E3CD35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D47D779C2AD1D86300E3CD35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +39,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D415AB252B010E16008B7498 /* BeerTable */ = {
+			isa = PBXGroup;
+			children = (
+				D47D779E2AD1D86300E3CD35 /* ViewController.swift */,
+				D415AB282B010F0C008B7498 /* BeerService.swift */,
+				D415AB2A2B010F4A008B7498 /* BeerDTO.swift */,
+			);
+			path = BeerTable;
+			sourceTree = "<group>";
+		};
 		D47D778E2AD1D86300E3CD35 = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +68,9 @@
 		D47D77992AD1D86300E3CD35 /* Course */ = {
 			isa = PBXGroup;
 			children = (
+				D415AB252B010E16008B7498 /* BeerTable */,
 				D47D779A2AD1D86300E3CD35 /* AppDelegate.swift */,
 				D47D779C2AD1D86300E3CD35 /* SceneDelegate.swift */,
-				D47D779E2AD1D86300E3CD35 /* ViewController.swift */,
 				D47D77A32AD1D86500E3CD35 /* Assets.xcassets */,
 				D47D77A52AD1D86500E3CD35 /* LaunchScreen.storyboard */,
 				D47D77A82AD1D86500E3CD35 /* Info.plist */,
@@ -135,7 +149,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D47D779F2AD1D86300E3CD35 /* ViewController.swift in Sources */,
+				D415AB292B010F0C008B7498 /* BeerService.swift in Sources */,
 				D47D779B2AD1D86300E3CD35 /* AppDelegate.swift in Sources */,
+				D415AB2B2B010F4A008B7498 /* BeerDTO.swift in Sources */,
 				D47D779D2AD1D86300E3CD35 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,17 +294,18 @@
 				DEVELOPMENT_TEAM = 6PN8FPUG64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Course/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Course;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.Course";
+				PRODUCT_BUNDLE_IDENTIFIER = "-Course";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -306,17 +323,18 @@
 				DEVELOPMENT_TEAM = 6PN8FPUG64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Course/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Course;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.Course";
+				PRODUCT_BUNDLE_IDENTIFIER = "-Course";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
