@@ -12,11 +12,11 @@ final class BeerTableView: UIView{
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .cyan
-        // tableView.dataSource = self
+        tableView.dataSource = tableManager
         return tableView
         
     }()
-    
+    private lazy var tableManager = BeerTableManager()
     init() {
         super.init(frame: .zero)
         self.backgroundColor = .white
@@ -27,6 +27,12 @@ final class BeerTableView: UIView{
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func configure(with viewModel: [BeerDTO]){
+        tableManager.tableData = viewModel
+        tableView.reloadData()
+    }
+    
 }
     
     private extension BeerTableView {
