@@ -18,18 +18,19 @@ final class BeerTableView: UIView{
         tableView.backgroundColor = .cyan
         tableView.dataSource = tableManager
         tableView.delegate = tableManager
-        tableView.delegate = self
         return tableView
         
     }()
     private lazy var tableManager = BeerTableManager()
-    var delegate: BeerTableViewDelegate?
+    var delegate: BeeerTableViewDelegate?
+    var beerData: [BeerDTO] = []
     
     init() {
         super.init(frame: .zero)
         self.backgroundColor = .white
         addSubviews()
         makeConstraints()
+        tableManager.delegate = self
     }
     
     required init?(coder: NSCoder) {
