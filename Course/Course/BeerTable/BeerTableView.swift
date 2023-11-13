@@ -7,21 +7,30 @@
 
 import UIKit
 
+protocol BeeerTableViewDelegate{
+    func didSelectRow(_ beerModel: BeerDTO)
+}
+
 final class BeerTableView: UIView{
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .cyan
         tableView.dataSource = tableManager
+        tableView.delegate = tableManager
         return tableView
         
     }()
     private lazy var tableManager = BeerTableManager()
+    var delegate: BeeerTableViewDelegate?
+    var beerData: [BeerDTO] = []
+    
     init() {
         super.init(frame: .zero)
         self.backgroundColor = .white
         addSubviews()
         makeConstraints()
+        tableManager.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -34,7 +43,14 @@ final class BeerTableView: UIView{
     }
     
 }
+extension BeerTableView: BeerTableManagerDelegate{
+    func didSelectRow(_ beerModel: BeerDTO) {
+        delegate?.didSelectRow(beerModel)
+        
+    }
     
+    
+}
     private extension BeerTableView {
         func addSubviews(){
             [tableView].forEach {

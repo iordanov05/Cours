@@ -12,6 +12,7 @@ import Foundation
 final class BeerTableViewController: UIViewController {
     private lazy var contentView: BeerTableView = {
         let view = BeerTableView()
+        view.delegate = self
         return view
     }()
 
@@ -39,14 +40,13 @@ final class BeerTableViewController: UIViewController {
         }
     }
 }
-
-
-
-
-
-
-
-
+extension BeerTableViewController: BeeerTableViewDelegate {
+    func didSelectRow(_ beerModel: BeerDTO) {
+        let vc = BeerDetailsViewController()
+        vc.beerModel = beerModel
+        present(vc, animated: true)
+    }
+}
 
 
 
